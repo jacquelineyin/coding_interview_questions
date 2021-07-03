@@ -24,7 +24,7 @@ let findSecondLargestInBST = (root) => {
 let findSecondLargestInBSTHelper = (node, parent) => {
     // find the right-most child - aka the largest elem
     // if right-most child is a leaf, then the second largest would be its parent
-    // if right-most child is an internal node, then it has a left-node, and that is the second largest elem
+    // if right-most child is an internal node, then it has a left-node, and the largest elem of the left-node is the second largest
 
     // Base Case 1: node is a leaf:
     if (!node.left && !node.right) {
