@@ -41,6 +41,10 @@
  * @param {Array} nums 
  * @param {int} target 
  * @returns {int} : number of unique pairs in the array that add up to given <target> number
+ * 
+ * Time Complexity: O(n), where n is the number of elems in n 
+ *    - Explanation: we're iterating over the length of the array and building the map as we go
+ * Space Complexity: O(n) - I think?
  */
 let twoSum6 = (nums, target) => {
     // edge cases:
