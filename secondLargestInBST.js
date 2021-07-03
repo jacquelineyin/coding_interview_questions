@@ -30,11 +30,19 @@ let findSecondLargestInBSTHelper = (node, parent) => {
     if (!node.left && !node.right) {
         return parent.value;
     } else if (!node.right && node.left) {
-        return node.left;
+        return findLargestInBST(node.left);
     } else {
         // has both node.right and node.left
         // .: we're not at right-most node yet
         // recurse to find right-most node
         findSecondLargestInBST(node.right, node);
+    }
+}
+
+let findLargestInBST = (node) => {
+    if (node && !node.right) {
+        return node.value;
+    } else if (node.right) {
+        return findLargestInBST(node.right);
     }
 }
